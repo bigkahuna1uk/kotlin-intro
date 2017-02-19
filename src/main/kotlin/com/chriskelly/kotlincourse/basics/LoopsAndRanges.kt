@@ -32,7 +32,7 @@ fun main(args: Array<String>) {
 
     //This works
     for (a in 100 downTo 1) println(a)
-    //FIXME: But this doesn't for some reason
+    //FIXME: But this doesn't for some reason. Apparently has an assertion internally to make sure count up only
     for (b in (100..1)) println(b)
 
     val capitals = listOf("Paris", "London", "Madrid", "Berlin")
