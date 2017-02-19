@@ -20,7 +20,7 @@ fun main(args: Array<String>) {
 
     val numbers = 1..100
     println(numbers)
-    println(numbers.javaClass)
+    println(numbers::class.java)
 
     for (a in 100 downTo 1) {
         println(a)
