@@ -9,7 +9,7 @@ package com.chriskelly.kotlincourse.inheritance
  */
 abstract class StoredEntity {
 
-    val isActive = true  //Abstract class can have state and concrete methods not just abstract
+    private val isActive = true  //Abstract class can have state and concrete methods not just abstract
 
     fun status(): String {
         return isActive.toString()
@@ -29,5 +29,5 @@ fun main(args: Array<String>) {
     val se = Employee()
 
     println("se = ${se}")
-    println(se.isActive)
+    println("se.status() = ${se.status()}")
 }
