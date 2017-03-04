@@ -9,7 +9,7 @@ package com.chriskelly.kotlincourse.inheritance
  */
 abstract class StoredEntity {
 
-    val isActive = true
+    val isActive = true  //Abstract class can have state and concrete methods not just abstract
 
     fun status(): String {
         return isActive.toString()
