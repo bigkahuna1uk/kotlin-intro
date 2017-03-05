@@ -1,5 +1,7 @@
 package com.chriskelly.kotlincourse.functional
 
+import com.chriskelly.kotlincourse.functional.Examples.identity
+
 /**
  * GettingFunctional
  *
@@ -29,7 +31,6 @@ fun route(path: String, vararg actions: (String, String) -> String) {
 
 fun sum(x: Int, y: Int) = x + y
 
-fun <T> identity(x: T): T = x
 
 fun main(args: Array<String>) {
     val result = operation(2, 3, ::sum)
