@@ -29,9 +29,9 @@ fun main(args: Array<String>) {
     } catch(e: NotANumberException) {
         println("${e.message}")
     }
-
+    
     val buffer = BufferedReader(FileReader(path("/input.txt")))
-
+    //NB. Kotlin has extension method on File to all read lines from file
     val result = try {
         val chars = CharArray(30)
         buffer.read(chars, 0, 30)  //Should blow up as reading 40 chars into array that can only hold 30
@@ -46,6 +46,8 @@ fun main(args: Array<String>) {
     }
 
     println("result = ${result}")
+    
+    path2("/input-long.txt")
 }
 
 
@@ -57,3 +59,13 @@ fun path(resource: String): File {
 
     return File(foundResource?.toURI())
 }
+
+fun path2(resource:String) : Unit {
+    val foundResource: URL = NotANumberException::class.java.getResource(resource)
+    
+    val file = File(foundResource?.toURI())
+    var i = 0
+    file.useLines { it -> it.iterator().forEach { s -> println("${i++}\t" + s) } }
+    
+}
+
