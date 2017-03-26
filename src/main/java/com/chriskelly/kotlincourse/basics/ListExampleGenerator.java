@@ -4,6 +4,7 @@ package com.chriskelly.kotlincourse.basics;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * ListExampleGenerator
@@ -23,6 +24,11 @@ public class ListExampleGenerator {
         {
             accum.add(s.toUpperCase());
         }
+
+        //Or
+        List<String> collect = list.stream()
+                .map(s -> s.toUpperCase())
+                .collect(Collectors.toList());
 
         return accum;
     }
