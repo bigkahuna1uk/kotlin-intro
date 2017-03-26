@@ -44,7 +44,7 @@ class PersonKotlin(id: Int) : PersonJava(id)
 class KotlinCustomerRepository : ICustomerRepository   //Implement interface from Java
 {
     override fun getById(id: Int): CustomerJava? {  //May return null hence ?
-        TODO("not implemented")
+        return null
     }
     
     override fun getAll(): MutableList<CustomerJava>? {

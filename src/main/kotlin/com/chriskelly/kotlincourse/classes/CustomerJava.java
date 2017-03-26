@@ -1,6 +1,7 @@
 package com.chriskelly.kotlincourse.classes;
 
 import com.google.common.base.MoreObjects;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.Objects;
 
@@ -61,5 +62,15 @@ public class CustomerJava {
 
     public void prettyPrint() {
         System.out.println("id = " + id + " name = " + name);
+    }
+
+    public @NotNull String neverNull()
+    {
+        return "A String";
+    }
+
+    public String sometimesNull()
+    {
+        return "A String";
     }
 }
