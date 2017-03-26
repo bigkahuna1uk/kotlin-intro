@@ -30,7 +30,7 @@ fun main(args: Array<String>) {
     ic.extension()
     
     val ic2 = InheritedClass()
-    ic2.extension()gs
+    ic2.extension()
 }
 
 
