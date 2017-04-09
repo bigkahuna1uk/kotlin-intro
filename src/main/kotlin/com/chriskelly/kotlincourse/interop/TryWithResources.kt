@@ -1,5 +1,7 @@
 package com.chriskelly.kotlincourse.interop
 
+import kotlinx.support.jdk7.use
+
 /**
  * TryWithResources
  *
@@ -22,6 +24,13 @@ class ResourceHolder : AutoCloseable {
 
 fun <R> using(block: ResourceHolder.() -> R): R {
     val holder = ResourceHolder()
+    holder.use { holder ->
+        return holder.block()
+    }
+}
+
+fun <R> usingWithTryFinally(block: ResourceHolder.() -> R): R {
+    val holder = ResourceHolder()
     try {
         return holder.block()
     } finally {
@@ -35,4 +44,10 @@ inline fun <T,R> use(t: T,  onExit:T.() -> Unit, block: (T) -> R): R {
     } finally {
         t.onExit()
     }
+}
+
+fun main(args: Array<String>) {
+    using {  }
+    
+    usingWithTryFinally {  }
 }
