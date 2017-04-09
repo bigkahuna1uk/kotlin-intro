@@ -32,6 +32,8 @@ fun main(args: Array<String>) {
     
     val runnable = Runnable { println("Invoking runnable") }
     
+    runnable.run()
+    
     val callable = Callable { return@Callable "Result from callable" }
     
     val result = callable.call()
@@ -43,13 +45,12 @@ class PersonKotlin(id: Int) : PersonJava(id)
 
 class KotlinCustomerRepository : ICustomerRepository   //Implement interface from Java
 {
-    override fun getById(id: Int): CustomerJava? {  //May return null hence ?
-        return null
+    override val all: List<CustomerJava> = listOf()
+    
+    override fun getById(id: Int): CustomerJava {  //May return null hence ?
+        return CustomerJava(-1, "somebody", "unkwnown@it.com")
     }
     
-    override fun getAll(): MutableList<CustomerJava>? {
-        TODO("not implemented")
-    }
 }
 
 //SAM

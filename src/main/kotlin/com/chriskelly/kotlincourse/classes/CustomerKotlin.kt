@@ -21,7 +21,8 @@ data class CustomerKotlin(var id: Int, var name: String, var email: String) {
     }
     
     @JvmName("preferential") fun makePreferred() {
-        
+        println("makePreffered:+")
+        println("makePreffered:-")
     }
     
     //Kotlin does not have checked exceptions but can annotate that it does throw
