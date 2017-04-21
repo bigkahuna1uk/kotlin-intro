@@ -19,5 +19,11 @@ public class TalkingToKotlin2 {
         customerKotlin.preferential();
 
         System.out.println("customerKotlin = " + customerKotlin);
+
+        String prefix2 = UtilityClass.prefix2("Big", "Kahuna");
+        System.out.println("prefix2 = " + prefix2);
+
+        int copyrightYear = UtilityClass.CopyrightYear;
+        System.out.println("copyrightYear = " + copyrightYear);
     }
 }
