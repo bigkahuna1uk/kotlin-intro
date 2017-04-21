@@ -43,6 +43,9 @@ enum class Status {
     
 }
 
+fun CustomerKotlin.extensionToReturnEmail(): String {
+    return this.email
+}
 
 fun main(args: Array<String>) {
     val customer1 = CustomerKotlin(1, "Chris", "chris.kelly@ab.co.uk")

@@ -1,6 +1,7 @@
 package com.chriskelly.kotlincourse.interop;
 
 import com.chriskelly.kotlincourse.classes.CustomerKotlin;
+import com.chriskelly.kotlincourse.classes.CustomerKotlinKt;
 
 /**
  * TalkingToKotlin2
@@ -25,5 +26,8 @@ public class TalkingToKotlin2 {
 
         int copyrightYear = UtilityClass.CopyrightYear;
         System.out.println("copyrightYear = " + copyrightYear);
+
+        String email = CustomerKotlinKt.extensionToReturnEmail(customerKotlin);//Using extension function from Java. Need to pass instance of object being extended
+        System.out.println("email from extension = " + email);
     }
 }
