@@ -84,4 +84,5 @@ fun main(args: Array<String>) {
     val mutableCollection = mutableListOf<Pair<String,String>>()
     albumAndTrackerLessThanXSecondsToDestination(200, albums, mutableCollection)
     mutableCollection.forEach { println("${it}") }
+    println(hashMapOf("1" to "2", "3" to "4", "5" to "6").javaClass)
 }
