@@ -35,7 +35,7 @@ fun unaryOperation(x: Int, op: (Int) -> Int): Int {
 }
 
 fun unaryOp(op: (Int) -> Int) {
-    
+    println(op(1))
 }
 
 fun transaction(db: Database, log: Logger, code: () -> Unit) {
