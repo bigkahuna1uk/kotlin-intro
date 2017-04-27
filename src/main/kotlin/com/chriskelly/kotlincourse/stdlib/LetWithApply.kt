@@ -67,6 +67,8 @@ fun main(args: Array<String>) {
     
     println("length = ${length}")
     
+    println("string.javaClass = ${string?.javaClass}")
+    
 }
 
 
